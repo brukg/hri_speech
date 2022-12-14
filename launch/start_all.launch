@@ -1,0 +1,5 @@
+<launch>  
+  <include file="$(find hri_speech)/launch/turtlebot3_house.launch"/>
+  <include file="$(find hri_speech)/launch/turtlebot3_slam.launch"/>
+  <include file="$(find hri_speech)/launch/move_base.launch"/>
+</launch>
