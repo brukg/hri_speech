@@ -23,9 +23,11 @@ _ROS-Noetic_
 After that simply install the following two packages
 
 ```
+    pip3 install mediapipe  #Gesture recognition
+    
     #for using deepspeech
     pip3 install deepspeech #Speech-to-Text
-    sudo apt-get install python3-pyaudio python3-pyaudio #
+    sudo apt-get install python3-pyaudio python3-pyaudio
 
     # for using whisper
     pip install git+https://github.com/openai/whisper.git 
