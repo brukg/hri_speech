@@ -19,8 +19,17 @@ depends on the follwing packages ros packages
 depends on the follwing packages python packages
 
 ```bash
-    pip3 install deepspeech #speech to text
     pip3 install mediapipe  #gesture recognition
+
+    #for using deepspeech
+    pip3 install deepspeech #speech to text
+    sudo apt-get install python3-pyaudio python3-pyaudio #
+
+    # for using whisper
+    pip install git+https://github.com/openai/whisper.git 
+    pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
+    # on Ubuntu or Debian
+    sudo apt update && sudo apt install ffmpeg
     
 
 ```
