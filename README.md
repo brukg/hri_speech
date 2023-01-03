@@ -22,15 +22,9 @@ _ROS-Noetic_
 
 After that simply install the following two packages
 
-```bash
-<<<<<<< HEAD
-    pip3 install deepspeech #Speech-to-Text
-    pip3 install mediapipe  #Gesture Recognition
-=======
-    pip3 install mediapipe  #gesture recognition
-
+```
     #for using deepspeech
-    pip3 install deepspeech #speech to text
+    pip3 install deepspeech #Speech-to-Text
     sudo apt-get install python3-pyaudio python3-pyaudio #
 
     # for using whisper
@@ -38,9 +32,7 @@ After that simply install the following two packages
     pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
     # on Ubuntu or Debian
     sudo apt update && sudo apt install ffmpeg
-    
 
->>>>>>> origin/v1.bruk
 ```
 
 ## How to run the project
