@@ -4,6 +4,7 @@ import rospy
 import numpy as np
 import rospkg
 from deep_speech import DeepSpeech
+from whisper_speech import WhisperSpeech
 from gesture_controller import GestureController
 from robot import Robot
 #create a class for ros node
@@ -22,7 +23,9 @@ class RosNode:
 
         self.ds_model = rospkg.RosPack().get_path('hri_speech') + '/models/deepspeech-0.9.3-models.pbmm'
         self.ds_scorer = rospkg.RosPack().get_path('hri_speech') + '/models/deepspeech-0.9.3-models.scorer'
-        self.deep_speech = DeepSpeech(self.ds_model, self.ds_scorer, self.robot)
+        # self.deep_speech = DeepSpeech(self.ds_model, self.ds_scorer, self.robot)
+
+        self.whisper = WhisperSpeech(self.robot)
         self.gesture_control = GestureController()
         # #create a timer
         self.timer = rospy.Timer(rospy.Duration(1), self.timer_callback)

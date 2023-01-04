@@ -8,6 +8,7 @@ import wave
 import collections, queue, os, os.path
 from scipy import signal
 import webrtcvad
+from task import text2task
 
 class DeepSpeech:
     def __init__(self, model, scorer, robot):
@@ -56,16 +57,8 @@ class DeepSpeech:
                     wav_data = bytearray()
                 text = stream_context.finishStream()
                 print("Recognized: %s" % text)
-                # check if tect contains a command
-                if text == "go to bedroom" or text == "go to the bedroom" or text == "go to bed room" or text == "go to the bed room":
-                    self.robot.goto("bedroom")
-                elif text == "go to bathroom" or text == "go to the bathroom" or text == "go to bath room" or text == "go to the bath room":
-                    self.robot.goto("bathroom")
-
-                elif text == "go to living room" or text == "go to the living room" or text == "go to livingroom" or text == "go to the livingroom":
-                    self.robot.goto("living room")
-                elif text == "go to kitchen" or text == "go to the kitchen" or text == "go to the kitchen" or text == "go to the kitchen":
-                    self.robot.goto("kitchen")    
+                # check if test contains a command
+                self.robot.goto(text2task(text))    
                 stream_context = self.model.createStream()
 
 

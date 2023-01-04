@@ -11,7 +11,7 @@ depends on the follwing packages ros packages
     sudo apt install ros-noetic-turtlebot3-slam     #slam
     sudo apt install ros-noetic-turtlebot3-navigation #navigation stack
     sudo apt install ros-noetic-gmapping                #for mapping
-    sudo apt install ros-noetic-dwa-local-planner       #for path planning
+    sudo apt install ros-noetic-dwa-local-planner       #dynamic windowing approach controller
     sudo apt install ros-noetic-behaviortree-cpp-v3     #for task planning
 
 ```
