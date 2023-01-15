@@ -88,10 +88,12 @@ class WhisperSpeech:
                 predicted_text = result["text"]
                 
                 result_queue.put_nowait("You said: " + predicted_text)
-                if len(predicted_text) > 0:
-                    task = text2task(predicted_text.lower())
+                if len(predicted_text) > 0 and "prime" in predicted_text.lower():
+                    print("You said: " + predicted_text)
+                    task, loc = text2task(predicted_text.lower())
+                    print(task)
                     if task is not None:
-                        self.robot.goto(task)
+                        self.robot.call(task, loc)
             else:
                 result_queue.put_nowait(result)
 

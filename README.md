@@ -34,6 +34,10 @@ install the following python packages
     pip install --upgrade --no-deps --force-reinstall git+https://github.com/openai/whisper.git
     # on Ubuntu or Debian
     sudo apt update && sudo apt install ffmpeg
+    #for text to speech
+    sudo apt install libespeak-dev
+    pip install pyttsx3
+
     
 
 ```
@@ -70,6 +74,13 @@ Go inside the **models** folder and download two deepspeech models.
     wget https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.pbmm
     wget https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.scorer
 ```
+
+openai davinci model is used to extract semantic meaning from text for this you have to setup openai key [here](https://beta.openai.com/account/api-keys) and export it before running the project replace the string in the below command with your key
+
+```bash
+export OPENAI_API_KEY="key obtained from openai account"
+```
+
 
 Finally run the project using the following command.
 
