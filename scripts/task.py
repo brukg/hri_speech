@@ -25,7 +25,7 @@ def text2task(text):
     print(data)
     if data.get("action") is not None and data.get("location") is not None and not "none" in (data["action"]).lower():
         print("action: "+data["action"])
-        if "go"  in (data["action"] if data["action"] else "unknown"):
+        if "go"  in data["action"]:# if data["action"] else "unknown"):
             if "bed" in data["location"]:
                 return "go", "bedroom"
             elif "bath" in data["location"]:
@@ -35,7 +35,7 @@ def text2task(text):
             elif "kitchen" in data["location"]:
                 return "go", "kitchen"
             else:
-                return "go", "unknown"
+                return "go",  data["location"]
         elif "stop" in data["action"]:
             return "stop", "none"
         else:

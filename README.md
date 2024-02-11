@@ -1,6 +1,8 @@
 # Speech-Based Human Robot Interaction and Task Assignment
 
-The motivation for this project is to communicate with robots through natural speech. For this we are using an open-source Speech-to-Text engine named [DeepSpeech](https://github.com/mozilla/DeepSpeech), developed by [Mozila](https://github.com/mozilla).
+The motivation for this project is to communicate with robots through natural speech. For this we are using an open-source Speech-to-Text engine named [DeepSpeech](https://github.com/mozilla/DeepSpeech), developed by [Mozila](https://github.com/mozilla) and whisper from openai 
+
+
 
 ## Getting Started
 

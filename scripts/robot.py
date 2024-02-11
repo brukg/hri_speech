@@ -30,7 +30,7 @@ class Robot():
         pass
 
     def goto(self, place):
-        self.say("Going to the" + place)
+        self.say("Going to the " + place)
         if place == "kitchen":
             self.move(1, 2)
         elif place == "bedroom":
